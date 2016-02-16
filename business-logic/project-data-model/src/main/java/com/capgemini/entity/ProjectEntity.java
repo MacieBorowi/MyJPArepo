@@ -25,10 +25,9 @@ public class ProjectEntity{
 	private YesNo external;
 
 	//bi-directional many-to-one association to EmploeeEntity
-//	@ManyToOne
-//	@JoinColumn(name="manager")
-//	@Column(nullable= true)
-//	private EmploeeEntity manager;
+	@JoinColumn(name="emploeeentity_id")
+	@ManyToOne
+	private EmploeeEntity manager;
 	
 	public ProjectEntity() {
 	}
@@ -40,7 +39,7 @@ public class ProjectEntity{
 	
 	public ProjectEntity(String name, EmploeeEntity manager, YesNo external) {
 		this.name = name;
-//		this.manager = manager;
+		this.manager = manager;
 		this.external = external;
 	}
 
@@ -61,12 +60,11 @@ public class ProjectEntity{
 	}
 
 	public EmploeeEntity getManager() {
-//		return manager;
-		return null;
+		return manager;
 	}
 
 	public void setManager(EmploeeEntity manager) {
-//		this.manager = manager;
+		this.manager = manager;
 	}
 
 	@Override
@@ -93,10 +91,6 @@ public class ProjectEntity{
 			return false;
 		return true;
 	}
-	
-
-
-
 	
 	
 }

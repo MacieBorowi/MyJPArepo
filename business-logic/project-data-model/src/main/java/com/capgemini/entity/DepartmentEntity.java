@@ -12,7 +12,6 @@ import javax.persistence.Table;
 public class DepartmentEntity{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "departmentId")
 	private int id;
 
 	@Column(nullable = false, length = 50)

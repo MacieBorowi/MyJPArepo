@@ -1,17 +1,15 @@
 package com.capgemini.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -36,13 +34,13 @@ public class EmploeeEntity {
 	private Date bornDate;
 
 	// bi-directional many-to-one association to DepartmentEntity
+	@JoinColumn(name="departmententity_id")
 	@ManyToOne
-	@JoinColumn(name = "departmentId")
 	private DepartmentEntity department;
 
-//	// bi-directional many-to-one association to WorkEntity
-//	@OneToMany(mappedBy = "emploee")
-//	private List<WorkEntity> workList;
+	// bi-directional many-to-one association to WorkEntity
+	@OneToMany(mappedBy = "emploee")
+	private List<WorkEntity> workList;
 
 	public EmploeeEntity() {
 	}
@@ -52,7 +50,7 @@ public class EmploeeEntity {
 		this.surname = surname;
 		this.bornDate = bornDate;
 		this.pesel = pesel;
-//		this.department = department;
+		this.department = department;
 	}
 	
 	public String getPesel() {
@@ -88,12 +86,12 @@ public class EmploeeEntity {
 	}
 
 	public List<WorkEntity> getWorkList() {
-//		return workList;
-		return null;
+		return workList;
+
 	}
 
 	public void setWorkList(List<WorkEntity> workList) {
-//		this.workList = workList;
+		this.workList = workList;
 	}
 	
 	public WorkEntity addWork(WorkEntity work) {
@@ -111,12 +109,11 @@ public class EmploeeEntity {
 	}	
 	
 	public DepartmentEntity getDepartment() {
-//		return department;
-		return null;
+		return department;
 	}
 	
 	public void setDepartment(DepartmentEntity department) {
-//		this.department = department;
+		this.department = department;
 	}
 
 	@Override

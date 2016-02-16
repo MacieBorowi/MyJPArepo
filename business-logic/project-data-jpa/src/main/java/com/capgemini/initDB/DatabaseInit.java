@@ -17,8 +17,8 @@ public	class DatabaseInit {
 	
 	private EntityManager entityManager;
 
-	public DatabaseInit(EntityManager entityManager2) {
-		this.entityManager = entityManager2;
+	public DatabaseInit(EntityManager entityManager) {
+		this.entityManager = entityManager;
 	}
 	
 	public Date getCalendarDate(int y, int m ,int  d){
@@ -120,48 +120,69 @@ public	class DatabaseInit {
 	
 	public void addWork() {
 		
-		WorkEntity entity1 = new WorkEntity(null, "Projekt1", getCalendarDate(116,0,4), getCalendarDate(116,0,5), Position.PL, new BigDecimal(5));
+		WorkEntity entity1 = new WorkEntity(null, null, getCalendarDate(116,0,4), getCalendarDate(116,0,5), Position.PL, new BigDecimal(5));
 		//entity1.setEmploee("88888888888");
-		WorkEntity entity2 = new WorkEntity(null, "Projekt2", getCalendarDate(116,0,4), getCalendarDate(116,1,4), Position.TCD, new BigDecimal(10));
+		//entity1.setpojectName("Projekt1");
+		WorkEntity entity2 = new WorkEntity(null, null, getCalendarDate(116,0,4), getCalendarDate(116,1,4), Position.TCD, new BigDecimal(10));
 		//entity1.setEmploee("88888888888");
-		WorkEntity entity3 = new WorkEntity(null, "Projekt2", getCalendarDate(113,1,8), getCalendarDate(116,4,4), Position.TCD, new BigDecimal(10));
+		//entity1.setpojectName("Projekt2");
+		WorkEntity entity3 = new WorkEntity(null, null, getCalendarDate(113,1,8), getCalendarDate(116,4,4), Position.TCD, new BigDecimal(10));
 		//entity1.setEmploee("77777777777");
-		WorkEntity entity4 = new WorkEntity(null, "Projekt3", getCalendarDate(110,0,1), getCalendarDate(115,4,5), Position.TCD, new BigDecimal(9));
+		//entity1.setpojectName("Projekt2");
+		WorkEntity entity4 = new WorkEntity(null, null, getCalendarDate(110,0,1), getCalendarDate(115,4,5), Position.TCD, new BigDecimal(9));
 		//entity1.setEmploee("22222222222");
-		WorkEntity entity5 = new WorkEntity(null, "Projekt4", getCalendarDate(112,7,1), getCalendarDate(114,5,5), Position.PL, new BigDecimal(8));
+		//entity1.setpojectName("Projekt3");
+		WorkEntity entity5 = new WorkEntity(null, null, getCalendarDate(112,7,1), getCalendarDate(114,5,5), Position.PL, new BigDecimal(8));
 		//entity1.setEmploee("33333333333");
-		WorkEntity entity6 = new WorkEntity(null, "Projekt4", getCalendarDate(100,8,1), getCalendarDate(116,0,1), Position.FCD, new BigDecimal(12));
+		//entity1.setpojectName("Projekt4");
+		WorkEntity entity6 = new WorkEntity(null, null, getCalendarDate(100,8,1), getCalendarDate(116,0,1), Position.FCD, new BigDecimal(12));
 		//entity1.setEmploee("11111111111");
-		WorkEntity entity7 = new WorkEntity(null, "Projekt1", getCalendarDate(115,0,4), getCalendarDate(116,1,1), Position.FCD, new BigDecimal(10));
+		//entity1.setpojectName("Projekt4");
+		WorkEntity entity7 = new WorkEntity(null, null, getCalendarDate(115,0,4), getCalendarDate(116,1,1), Position.FCD, new BigDecimal(10));
 		//entity1.setEmploee("88888888886");
-		WorkEntity entity8 = new WorkEntity(null, "Projekt6", getCalendarDate(105,9,15), getCalendarDate(116,1,8), Position.DEV, new BigDecimal(20));
+		//entity1.setpojectName("Projekt1");
+		WorkEntity entity8 = new WorkEntity(null, null, getCalendarDate(105,9,15), getCalendarDate(116,1,8), Position.DEV, new BigDecimal(20));
 		//entity1.setEmploee("88888888882");
-		WorkEntity entity9 = new WorkEntity(null, "Projekt4", getCalendarDate(104,3,4), getCalendarDate(114,9,14), Position.DEV, new BigDecimal(18));
+		//entity1.setpojectName("Projekt6");
+		WorkEntity entity9 = new WorkEntity(null, null, getCalendarDate(104,3,4), getCalendarDate(114,9,14), Position.DEV, new BigDecimal(18));
 		//entity1.setEmploee("44444444444");
-		WorkEntity entity10 = new WorkEntity(null, "Projekt5", getCalendarDate(115,8,1), getCalendarDate(116,0,2), Position.PL, new BigDecimal(16));
+		//entity1.setpojectName("Projekt4");
+		WorkEntity entity10 = new WorkEntity(null, null, getCalendarDate(115,8,1), getCalendarDate(116,0,2), Position.PL, new BigDecimal(16));
 		//entity1.setEmploee("33333333333");
-		WorkEntity entity11 = new WorkEntity(null, "Projekt1", getCalendarDate(111,9,1), getCalendarDate(116,0,1), Position.PL, new BigDecimal(10));
+		//entity1.setpojectName("Projekt5");
+		WorkEntity entity11 = new WorkEntity(null, null, getCalendarDate(111,9,1), getCalendarDate(116,0,1), Position.PL, new BigDecimal(10));
 		//entity1.setEmploee("88888888887");
-		WorkEntity entity12 = new WorkEntity(null, "Projekt1", getCalendarDate(115,7,14), getCalendarDate(116,11,7), Position.DEV, new BigDecimal(16));
+		//entity1.setpojectName("Projekt1");
+		WorkEntity entity12 = new WorkEntity(null, null, getCalendarDate(115,7,14), getCalendarDate(116,11,7), Position.DEV, new BigDecimal(16));
 		//entity1.setEmploee("88888888889");
-		WorkEntity entity13 = new WorkEntity(null, "Projekt3", getCalendarDate(111,1,12), getCalendarDate(115,11,19), Position.TCD, new BigDecimal(20));
+		//entity1.setpojectName("Projekt1");
+		WorkEntity entity13 = new WorkEntity(null, null, getCalendarDate(111,1,12), getCalendarDate(115,11,19), Position.TCD, new BigDecimal(20));
 		//entity1.setEmploee("88888888886");
-		WorkEntity entity14 = new WorkEntity(null, "Projekt2", getCalendarDate(114,6,13), getCalendarDate(115,2,7), Position.PL, new BigDecimal(14));
+		//entity1.setpojectName("Projekt3");
+		WorkEntity entity14 = new WorkEntity(null, null, getCalendarDate(114,6,13), getCalendarDate(115,2,7), Position.PL, new BigDecimal(14));
 		//entity1.setEmploee("88888888887");
-		WorkEntity entity15 = new WorkEntity(null, "Projekt5", getCalendarDate(114,0,13), getCalendarDate(115,1,17), Position.PL, new BigDecimal(14));
+		//entity1.setpojectName("Projekt2");
+		WorkEntity entity15 = new WorkEntity(null, null, getCalendarDate(114,0,13), getCalendarDate(115,1,17), Position.PL, new BigDecimal(14));
 		//entity1.setEmploee("88888888889");
-		WorkEntity entity16 = new WorkEntity(null, "Projekt1", getCalendarDate(115,7,4), getCalendarDate(116,1,8), Position.DEV, new BigDecimal(5.5));
+		//entity1.setpojectName("Projekt5");
+		WorkEntity entity16 = new WorkEntity(null, null, getCalendarDate(115,7,4), getCalendarDate(116,1,8), Position.DEV, new BigDecimal(5.5));
 		//entity1.setEmploee("88888888883");
-		WorkEntity entity17 = new WorkEntity(null, "Projekt2", getCalendarDate(111,8,4), getCalendarDate(115,5,3), Position.PL, new BigDecimal(15));
+		//entity1.setpojectName("Projekt1");
+		WorkEntity entity17 = new WorkEntity(null, null, getCalendarDate(111,8,4), getCalendarDate(115,5,3), Position.PL, new BigDecimal(15));
 		//entity1.setEmploee("88888888883");
-		WorkEntity entity18 = new WorkEntity(null, "Projekt1", getCalendarDate(114,7,14), getCalendarDate(115,7,14), Position.TCD, new BigDecimal(16));
+		//entity1.setpojectName("Projekt2");
+		WorkEntity entity18 = new WorkEntity(null, null, getCalendarDate(114,7,14), getCalendarDate(115,7,14), Position.TCD, new BigDecimal(16));
 		//entity1.setEmploee("88888888889");
-		WorkEntity entity19 = new WorkEntity(null, "Projekt3", getCalendarDate(114,0,13), null, Position.FCD, new BigDecimal(17));
+		//entity1.setpojectName("Projekt1");
+		WorkEntity entity19 = new WorkEntity(null, null, getCalendarDate(114,0,13), null, Position.FCD, new BigDecimal(17));
 		//entity1.setEmploee("88888888889");
-		WorkEntity entity20 = new WorkEntity(null, "Projekt5", getCalendarDate(114,7,1), null, Position.DEV, new BigDecimal(17));
+		//entity1.setpojectName("Projekt3");
+		WorkEntity entity20 = new WorkEntity(null, null, getCalendarDate(114,7,1), null, Position.DEV, new BigDecimal(17));
 		//entity1.setEmploee("77777777777");
-		WorkEntity entity21 = new WorkEntity(null, "Projekt6", getCalendarDate(114,7,14), null, Position.FCD, new BigDecimal(17));
+		//entity1.setpojectName("Projekt5");
+		WorkEntity entity21 = new WorkEntity(null, null, getCalendarDate(114,7,14), null, Position.FCD, new BigDecimal(17));
 		//entity1.setEmploee("88888888889");
+		//entity1.setpojectName("Projekt6");
 		
 		entityManager.getTransaction().begin();;
 		entityManager.persist(entity1);

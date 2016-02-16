@@ -1,6 +1,5 @@
 package com.capgemini.entity;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -12,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -21,7 +22,7 @@ import com.capgemini.enums.Position;
 
 @Entity
 @Table(name = "worklist"
-, uniqueConstraints =  @UniqueConstraint(name = "uniquepojectName", columnNames = {"pojectName","startDate"})
+//, uniqueConstraints =  @UniqueConstraint(name = "uniquepojectName", columnNames = {"startDate"})
 )
 public class WorkEntity{
 	
@@ -36,9 +37,9 @@ public class WorkEntity{
 	@Column(nullable = true, precision =10 , scale=2 )
 	private  BigDecimal salary;
 
-	
-	@Column(nullable = false, length = 50)
-	private String pojectName;
+	@JoinColumn(name="projectentity_id")
+	@ManyToOne
+	private ProjectEntity pojectName;
 
 	@Temporal(TemporalType.DATE)
 	@Column(nullable = false)
@@ -48,16 +49,15 @@ public class WorkEntity{
 	@Column(nullable = true)
 	private Date endDate;
 	
-//	@ManyToOne
-//	@JoinColumn(name="pesel")
-//	private EmploeeEntity emploee;
+	@ManyToOne
+	private EmploeeEntity emploee;
 
 	public WorkEntity(){
 	}
 	
-	public WorkEntity( EmploeeEntity emploee, String pojectName, Date startDate,
+	public WorkEntity( EmploeeEntity emploee, ProjectEntity pojectName, Date startDate,
 			Date endDate, Position position, BigDecimal salary) {
-//		this.emploee = emploee;
+		this.emploee = emploee;
 		this.pojectName = pojectName;
 		this.startDate = startDate;
 		this.endDate = endDate;
@@ -81,11 +81,11 @@ public class WorkEntity{
 		this.salary = salary;
 	}
 
-	public String getpojectName() {
+	public ProjectEntity getpojectName() {
 		return pojectName;
 	}
 
-	public void setpojectName(String pojectName) {
+	public void setpojectName(ProjectEntity pojectName) {
 		this.pojectName = pojectName;
 	}
 
@@ -106,12 +106,11 @@ public class WorkEntity{
 	}
 
 	public EmploeeEntity getEmploee() {
-//		return emploee;
-		return null;
+		return emploee;
 	}
 
 	public void setEmploee(EmploeeEntity emploee) {
-//		this.emploee = emploee;
+		this.emploee = emploee;
 	}
 
 	@Override

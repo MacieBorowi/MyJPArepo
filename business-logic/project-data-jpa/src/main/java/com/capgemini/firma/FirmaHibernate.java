@@ -14,10 +14,12 @@ public class FirmaHibernate {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 
 		DatabaseInit dbInit = new DatabaseInit(entityManager);
-		//dbInit.addDepartments();
-		//dbInit.addProjects();
-		//dbInit.addWorkers();
-		//dbInit.addWork();
+		dbInit.addDepartments();
+		dbInit.addProjects();
+		dbInit.addWorkers();
+		dbInit.addWork();
+		
+		
 		
 		
 		
