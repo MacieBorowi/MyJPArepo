@@ -13,6 +13,7 @@
 		<module>project-data-model</module>
 
 		<module>project-data-jpa</module>
+		
 	</modules>
 
 	<dependencies>

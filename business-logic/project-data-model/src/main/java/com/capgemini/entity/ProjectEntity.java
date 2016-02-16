@@ -15,9 +15,8 @@ import com.capgemini.enums.YesNo;
 
 @Entity
 @Table(name = "projects")
-public class ProjectEntity implements Serializable{
-	private static final long serialVersionUID = 1L;
-
+public class ProjectEntity{
+	
 	@Id
 	private String name;
 	

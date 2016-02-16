@@ -20,9 +20,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "emploees")
-public class EmploeeEntity implements Serializable {
-	private static final long serialVersionUID = 1L;
-
+public class EmploeeEntity {
 	@Id
 	@Column(nullable = false, length = 11)
 	private String pesel;

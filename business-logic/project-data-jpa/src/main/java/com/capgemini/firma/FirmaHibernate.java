@@ -13,7 +13,7 @@ public class FirmaHibernate {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("org.myDatabase.jpa");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-		//DatabaseInit dbInit = new DatabaseInit(entityManager);
+		DatabaseInit dbInit = new DatabaseInit(entityManager);
 		//dbInit.addDepartments();
 		//dbInit.addProjects();
 		//dbInit.addWorkers();

@@ -23,9 +23,8 @@ import com.capgemini.enums.Position;
 @Table(name = "worklist"
 , uniqueConstraints =  @UniqueConstraint(name = "uniquepojectName", columnNames = {"pojectName","startDate"})
 )
-public class WorkEntity implements Serializable{
-	private static final long serialVersionUID = 1L;
-
+public class WorkEntity{
+	
 	@Id
 	@GeneratedValue
 	private int id;
