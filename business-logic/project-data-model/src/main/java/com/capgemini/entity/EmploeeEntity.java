@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -18,6 +19,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "emploees")
+@NamedQuery(name="EmploeeEntity.findAllNamedQuery", query="SELECT e FROM EmploeeEntity e")
 public class EmploeeEntity {
 	@Id
 	@Column(nullable = false, length = 11)

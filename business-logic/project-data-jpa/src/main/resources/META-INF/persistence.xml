@@ -19,7 +19,8 @@
 			<property name="javax.persistence.jdbc.password" value="HasloAdministratora!" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/firma" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="javax.persistence.schema-generation.database.action" value="create" />
+			<!-- "create", "drop", "drop-and-create", "none". -->
 			<property name="packagesToScan" value="com.capgemini.entity" />
 		</properties>
 

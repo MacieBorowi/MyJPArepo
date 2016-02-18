@@ -1,4 +1,4 @@
-package com.capgemini.dao;
+package artur;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -10,8 +10,7 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 
-//@Transactional
-public abstract class AbstractDao<T, K extends Serializable> implements Dao<T, K> {
+public abstract class AbstractDao2<T, K extends Serializable> implements Dao2<T, K> {
 
 	@PersistenceContext
 	protected EntityManager entityManager;
@@ -37,6 +36,7 @@ public abstract class AbstractDao<T, K extends Serializable> implements Dao<T, K
 
 //	@SuppressWarnings("unchecked")
 	public List<T> findAll() {
+		//TODO: poczytać jeszcze o tym, co tu się dzieje
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = builder.createQuery(getDomainClass());
         criteriaQuery.from(getDomainClass());
@@ -65,6 +65,7 @@ public abstract class AbstractDao<T, K extends Serializable> implements Dao<T, K
 	}
 
 	public void deleteAll() {
+		//TODO: poczytać jeszcze o tym, co tu się dzieje
 		entityManager.getTransaction().begin();
         entityManager.createQuery("delete " + getDomainClassName()).executeUpdate();
 		entityManager.getTransaction().commit();
